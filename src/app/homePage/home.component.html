@@ -1,6 +1,16 @@
-<div *ngFor="let newSongs of newSongs" class="AlbumCovers"> <!--Need A NgFor to loop through the images-->
-        <img src="{{newSongs.images[0].url}}" id="song-image">
-  <div>
-    <h5 id="AlbumName">{{ newSongs.name }}</h5>    <!--Album Name-->
-  </div>
+<div>
+  Hello
+
+</div>
+<app-search></app-search>
+
+<p></p>
+<div class="container">
+
+      <div *ngFor="let newSong of newSongs" class="item"  >
+        <!--Need A NgFor to loop through the images-->
+            <img src="{{newSong.images[0].url}}" class="album-image">   
+            <h5 id="AlbumName">{{ newSong.name }}</h5>
+            <!--Album Name-->
+      </div>
 </div>
