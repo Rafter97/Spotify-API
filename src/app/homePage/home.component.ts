@@ -21,9 +21,10 @@ export class HomeComponent implements OnInit{
         this.errorMessage = error.error.error.message;
       });
       console.log(this.newSongs);
-  }
+}
 
-  ngOnInit() {
-  }
+ngOnInit() 
+{  
+}
 
 }

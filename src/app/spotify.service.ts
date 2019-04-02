@@ -16,7 +16,7 @@ export class SpotifyService {
     const url = `https://api.spotify.com/v1/${query}`;
     const headers = new HttpHeaders({
       Authorization:
-        `Bearer BQAZQbVLRUZHMpCnn2VR6DBfMPr-ODYd9119RMjHzM9D4KCo8g3YFjtzzZ0D9PWmC6dWYOcBrbJIjF27zq8`
+        `Bearer BQAZQbVLRUZHMpCnn2VR6DBfMPr-ODYd9119RMjHzM9D4KCo8g3YFjtzzZ0D9PWmC6dWYOcBrbJIjF27zq8`  //key reset every hour
     });
     return this.http.get(url, { headers });
   }
