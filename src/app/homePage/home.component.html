@@ -1,9 +1,6 @@
-<div *ngIf="newSongs.images ">
-       <!--
+<div *ngFor="let newSongs of newSongs" class="AlbumCovers">
         <img src="{{newSongs.images[0].url}}" id="song-image">
-      -->
   <div>
-    <h5>{{ newSongs.name }}</h5>
-   
+    <h5 id="songName">{{ newSongs.name }}</h5>  
   </div>
 </div>
