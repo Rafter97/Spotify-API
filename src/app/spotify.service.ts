@@ -11,7 +11,6 @@ export class SpotifyService {
   //  clientSecertId = 'c11faf191210476887ed694d9fa72182';
 
   constructor(private http:HttpClient) { }
-
   getQuery(query: string) {
     const url = `https://api.spotify.com/v1/${query}`;
     const headers = new HttpHeaders({

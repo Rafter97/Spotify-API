@@ -1,6 +1,6 @@
-<div *ngFor="let newSongs of newSongs" class="AlbumCovers">
+<div *ngFor="let newSongs of newSongs" class="AlbumCovers"> <!--Need A NgFor to loop through the images-->
         <img src="{{newSongs.images[0].url}}" id="song-image">
   <div>
-    <h5 id="songName">{{ newSongs.name }}</h5>  
+    <h5 id="AlbumName">{{ newSongs.name }}</h5>    <!--Album Name-->
   </div>
 </div>
