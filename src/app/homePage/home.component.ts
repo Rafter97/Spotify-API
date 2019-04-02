@@ -23,6 +23,17 @@ export class HomeComponent implements OnInit{
       console.log(this.newSongs);
 }
 
+DisplayArtists( item: any ) {
+  //let artistID;
+  //if ( item.type === 'artist' ) {
+    //artistID = item.id;
+  //} 
+//  else {
+    //artistID = item.artists[0].id;
+  //}
+//  return navigate([ '/artist', artistID  ]);
+}
+
 ngOnInit() 
 {  
 }

@@ -15,7 +15,8 @@ export class SpotifyService {
     const url = `https://api.spotify.com/v1/${query}`;
     const headers = new HttpHeaders({
       Authorization:
-        `Bearer BQB9YIwxY2leoORJX539PA28edaaDIQRHeFmN8ujZtdqyCOL0nIF9PL4MJHcyzcBWL117JSsVdAl55XSWCk`  //key reset every hour  ---   I used postman
+        `Bearer BQAHnRUc5r1pu8pYwN3TgEUMT0anKreIC_iZCtHh4r-2oZS7qVtsx-I8SjIyr3VSjDc27Efo0YdsgR45Ed8`  
+        //key reset every hour --- I used postman to get it
     });
     return this.http.get(url, { headers });
   }
@@ -25,4 +26,6 @@ export class SpotifyService {
       map(data => data["albums"].items)
     );
   }
+
+
 }
