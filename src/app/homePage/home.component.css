@@ -8,9 +8,10 @@
     display: inline-block;
     width: 33%;
     margin: 1px;
+    display: inline-table;
 }
 #AlbumName{
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .container{
@@ -20,4 +21,7 @@
 .img-fluid{
     max-width: 100%;
     height: auto;
+}
+.Middle{
+    text-align: center;
 }
