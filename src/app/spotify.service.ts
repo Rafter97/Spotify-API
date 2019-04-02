@@ -7,8 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SpotifyService {
-  accessToken = '';
-  //clientId = '1a35a32a3614461eb98bcfc86e8f813c';
+  //  clientId = '1a35a32a3614461eb98bcfc86e8f813c';
+  //  clientSecertId = 'c11faf191210476887ed694d9fa72182';
+
   constructor(private http:HttpClient) { }
 
   getQuery(query: string) {
@@ -20,7 +21,7 @@ export class SpotifyService {
     return this.http.get(url, { headers });
   }
 
-  getNewReleases() {
+  NewReleases() {
     return this.getQuery("browse/new-releases?limit=50").pipe(
       map(data => data["albums"].items)
     );
