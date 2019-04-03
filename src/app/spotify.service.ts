@@ -15,7 +15,7 @@ export class SpotifyService {
     const url = `https://api.spotify.com/v1/${query}`;
     const headers = new HttpHeaders({
       Authorization:
-        `Bearer BQCRRSPoiSBChzPOeI02xdpSOdEmO7LSytwysPIkKCFuK-S8gmIsJdARAJg1oN6JnO7PmroYHiiRsXdoB60`
+        `Bearer BQDGlz-ZrkZ2HsA45F19Qtd0RXUUwprviBVthuZFtu32cxBXTdbCTHXtx9Ws4JWq8Xx-NJyK7AV0wPyIqmE`
       //key reset every hour --- I used postman to get it
     });
     return this.http.get(url, { headers });
