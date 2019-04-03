@@ -6,7 +6,7 @@ import { SpotifyService } from '../spotify.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
 
   newSongs: any[] = [];
   errorMessage: string;
@@ -20,13 +20,13 @@ export class HomeComponent implements OnInit{
       }, (error) => {
         this.errorMessage = error.error.error.message;
       });
-      console.log(this.newSongs);
-}
+    console.log(this.newSongs);
+  }
 
 
 
-ngOnInit() 
-{  
-}
+  ngOnInit() {
+    
+  }
 
 }

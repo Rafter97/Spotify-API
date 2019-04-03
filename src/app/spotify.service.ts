@@ -15,7 +15,7 @@ export class SpotifyService {
     const url = `https://api.spotify.com/v1/${query}`;
     const headers = new HttpHeaders({
       Authorization:
-        `Bearer BQB-HhBhSp-MTJuDE0E2t9GyLLYzafkbabYgOFi3klVGyde66eE2mAtyORMuQy29RXUVh9d_Vk5EFQwCwuo`
+        `Bearer BQCRRSPoiSBChzPOeI02xdpSOdEmO7LSytwysPIkKCFuK-S8gmIsJdARAJg1oN6JnO7PmroYHiiRsXdoB60`
       //key reset every hour --- I used postman to get it
     });
     return this.http.get(url, { headers });
@@ -32,16 +32,16 @@ export class SpotifyService {
     return this.getQuery(`search?q=${searchTerm}&type=artist&limit=50`).pipe(
       map(data => data["artists"].items)
     );
-  }
+   }
+
+getAlbumn(searchTerm:string){
+  return this.getQuery(`search?q=${searchTerm}&type=album`).pipe(
+    map(data => data["albums"].items)
+    );
+}
 
 
 
 
 
-
-
-  //Method is being Accessed in the Artists.Component.ts
-  Artists(id: string) {
-    return this.getQuery(`artists/${id}`);
-  }
 }

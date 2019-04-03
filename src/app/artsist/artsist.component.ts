@@ -8,20 +8,12 @@ import { SpotifyService } from '../spotify.service';
 })
 export class ArtsistComponent implements OnInit {
 
-  artist: any = {};
-  topTracks: any[] = [];
-
   constructor(private spotify: SpotifyService) {
 
   }
 
-  getArtist(id: string) {
-    this.spotify.Artists(id)
-      .subscribe(artist => {
-        console.log(artist);
-        this.artist = artist;
-      });
-  }
+
+  
 
 
   ngOnInit() {
