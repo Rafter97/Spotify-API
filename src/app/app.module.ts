@@ -7,6 +7,7 @@ import { SearchComponent } from './search/search.component';
 import { TracksComponent } from './tracks/tracks.component';
 import { ArtistComponent } from './artist/artist.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AlbumsComponent } from './albums/albums.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { RouterModule, Routes } from '@angular/router';
     SearchComponent,
     TracksComponent,
     ArtistComponent,
+    AlbumsComponent,
   ],
   imports: [
     BrowserModule,
