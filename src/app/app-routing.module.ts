@@ -13,9 +13,3 @@ export const routes: Routes = [
     { path: 'albums/:id', component: AlbumsComponent }
 ];
 
-@NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
-})
-
-export class AppRoutingModule { }

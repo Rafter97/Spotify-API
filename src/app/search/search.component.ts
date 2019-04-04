@@ -15,7 +15,6 @@ export class SearchComponent implements OnInit {
   artists: any[] = [];
   albums: any[] = [];
 
-
   constructor(private _Spotify: SpotifyService, private router: Router) { }
 
   searchArtists(searchTerm: string) {
@@ -60,8 +59,8 @@ export class SearchComponent implements OnInit {
     }
     //Navigate to Artist Page
     this.router.navigate(['/album', albumID]);
-
   }
+  
   ngOnInit() {
 
   }

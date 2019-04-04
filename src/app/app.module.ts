@@ -8,6 +8,8 @@ import { TracksComponent } from './tracks/tracks.component';
 import { ArtistComponent } from './artist/artist.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AlbumsComponent } from './albums/albums.component';
+import {routes} from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -21,9 +23,10 @@ import { AlbumsComponent } from './albums/albums.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
