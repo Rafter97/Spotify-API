@@ -26,7 +26,6 @@ export class SearchComponent implements OnInit {
       });
     this.searchAlbumn(searchTerm);
   }
-
   searchAlbumn(searchTerm: string) {
     this._Spotify.getAlbumn(searchTerm)
       .subscribe((data: any) => {
@@ -35,6 +34,7 @@ export class SearchComponent implements OnInit {
       });
   }
 
+
   //Display Artist in a different Page
   DisplayArtists(item: any) {
     let artistID;
@@ -42,7 +42,7 @@ export class SearchComponent implements OnInit {
       artistID = item.id;
     }
     else {
-      artistID = item.artists[0].id;
+      artistID = item.artists.id;
     }
     //Navigate to Artist Page
     this.router.navigate(['/artist', artistID]);
@@ -55,7 +55,7 @@ export class SearchComponent implements OnInit {
       albumID = item.id;
     }
     else {
-      albumID = item.album[0].id;
+      albumID = item.album.id;
     }
     //Navigate to Artist Page
     this.router.navigate(['/albums', albumID]);
