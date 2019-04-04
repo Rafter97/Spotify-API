@@ -1,9 +1,13 @@
-(02-04-2019 Starting Date) 
+(02-04-2019 Starting Date)
 This is my First Time using Angular + Spotify API. 
-Still Learning.
+Still Learning. 
 
 When you enter into run 
-'npm install' (install Node Modules)
+`npm install`   (install Node Modules)
+
+s00181793 = SligosFinest
+
+
 # SpotifyAPI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
