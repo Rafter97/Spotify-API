@@ -20,15 +20,15 @@ export class SearchComponent implements OnInit {
         console.log(searchTerm);
         console.log(this.artists);
       });
-      this.searchAlbumn(searchTerm);
+    this.searchAlbumn(searchTerm);
   }
 
   searchAlbumn(searchTerm: string) {
     this._Spotify.getAlbumn(searchTerm)
-    .subscribe((data:any) =>{
-      this.albums = data;
-      console.log(this.albums);
-    });
+      .subscribe((data: any) => {
+        this.albums = data;
+        console.log(this.albums);
+      });
   }
 
 
