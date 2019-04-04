@@ -5,6 +5,7 @@ import { HomeComponent } from './homePage/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
 import { SongsComponent } from './songs/songs.component';
+import { TracksComponent } from './tracks/tracks.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { SongsComponent } from './songs/songs.component';
     HomeComponent,
     SearchComponent,
     SongsComponent,
+    TracksComponent,
   ],
   imports: [
     BrowserModule,
