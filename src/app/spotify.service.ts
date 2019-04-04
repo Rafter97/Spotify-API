@@ -40,13 +40,13 @@ export class SpotifyService {
   }
 
   //Getting the Top Tracks by an Artist
-  getArtist_Track(id :string){
+  getArtist_Track(id: string) {
     return this.getQuery(`artists/${id}/top-tracks`).pipe(
       map(data => data["tracks"].items)
     );
   }
   //Getting the Tracks in an Album
-  getAlbum_Track(id: string){
+  getAlbum_Track(id: string) {
     return this.getQuery(`albums/${id}/tracks`).pipe(
       map(data => data["tracks"].items)
     );

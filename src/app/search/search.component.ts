@@ -36,31 +36,30 @@ export class SearchComponent implements OnInit {
       });
   }
 
-
   //Display Artist in a different Page
-  DisplayArtists( item: any ) {
+  DisplayArtists(item: any) {
     let artistID;
-    if ( item.type === 'artist' ) {
+    if (item.type === 'artist') {
       artistID = item.id;
-    } 
+    }
     else {
       artistID = item.artists[0].id;
     }
     //Navigate to Artist Page
-    this.router.navigate([ '/artist', artistID  ]);
+    this.router.navigate(['/artist', artistID]);
   }
 
-    //Display Album in a different Page
-  DisplayAlbum(item: any){
+  //Display Album in a different Page
+  DisplayAlbum(item: any) {
     let albumID;
-    if ( item.type === 'album' ) {
+    if (item.type === 'album') {
       albumID = item.id;
-    } 
+    }
     else {
       albumID = item.album[0].id;
     }
     //Navigate to Artist Page
-    this.router.navigate([ '/album', albumID  ]);
+    this.router.navigate(['/album', albumID]);
 
   }
   ngOnInit() {
