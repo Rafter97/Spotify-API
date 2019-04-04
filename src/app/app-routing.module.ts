@@ -10,6 +10,7 @@ import { HomeComponent } from './homePage/home.component';
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'artist/:id', component: ArtistComponent },
-    { path: 'albums/:id', component: AlbumsComponent }
+    { path: 'albums/:id', component: AlbumsComponent },
+    { path: '**', component: HomeComponent }
 ];
 

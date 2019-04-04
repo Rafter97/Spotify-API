@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../spotify.service';
-
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-artist',
@@ -10,9 +10,11 @@ import { SpotifyService } from '../spotify.service';
 export class ArtistComponent implements OnInit {
   artist: any = {};
   topTracks: any[] = [];
+  id: string;
 
-  constructor(private spotify: SpotifyService) { }
-
+  constructor(private spotify: SpotifyService, route:ActivatedRoute) { 
+    route.params.subscribe( params => this.id = params.id)
+  }
 
   getArtist(id: string) {
     this.spotify.getArtist(id)

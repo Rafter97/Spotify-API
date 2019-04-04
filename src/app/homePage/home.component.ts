@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
 
   newSongs: any[] = [];
   errorMessage: string;
-  @Input() items: any[] = [];
+  //@Input() items: any[] = [];
 
   constructor(private _spotify: SpotifyService) {
 

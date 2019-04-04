@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 
 
 export class SearchComponent implements OnInit {
-  @Input() items: any[] = [];
+  //@Input() items: any[] = [];
 
   artists: any[] = [];
   albums: any[] = [];
@@ -33,8 +33,7 @@ export class SearchComponent implements OnInit {
         console.log(this.albums);
       });
   }
-
-
+  
   //Display Artist in a different Page
   DisplayArtists(item: any) {
     let artistID;
