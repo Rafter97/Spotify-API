@@ -4,20 +4,22 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './homePage/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
-import { SongsComponent } from './songs/songs.component';
 import { TracksComponent } from './tracks/tracks.component';
+import { ArtistComponent } from './artist/artist.component';
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SearchComponent,
-    SongsComponent,
     TracksComponent,
+    ArtistComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,7 +9,7 @@
   <h4 style=" text-align: center;" id="Titles">Artists</h4> 
 
   <div *ngFor="let artistsName of artists" class="item">
-    <img src="{{artistsName.images[0].url}}" class="artist-image" width="200" height="200">
+    <img src="{{artistsName.images[0].url}}" class="artist-image" width="200" height="200" (click)="DisplayArtists(item)">
     <h5 id="artistName">{{ artistsName.name }}</h5>
   </div>
 
@@ -21,7 +21,7 @@
   <h4 style=" text-align: center;" id="Titles">Albums</h4>
 
   <div *ngFor="let albumCover of albums" class="item">
-    <img src="{{albumCover.images[0].url}}" class="artist-image" width="200" height="200">
+    <img src="{{albumCover.images[0].url}}" class="artist-image" width="200" height="200" (click)="DisplayAlbum(item)">
     <h5 id="artistName">{{ albumCover.name }}</h5> 
   </div>
 
