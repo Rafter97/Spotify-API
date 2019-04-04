@@ -1,3 +1,9 @@
+(02-04-2019 Starting Date) 
+This is my First Time using Angular + Spotify API. 
+Still Learning.
+
+When you enter into run 
+'npm install' (install Node Modules)
 # SpotifyAPI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
