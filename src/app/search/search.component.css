@@ -7,13 +7,13 @@
   height: 32%;
 }
 
-.item {
+.items {
   display: inline-block;
   width: 33%;
   margin: 1px;
 }
 
-#artistName {
+#Name {
   font-size: 12px;
 }
 

@@ -4,7 +4,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './homePage/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
-import { TracksComponent } from './tracks/tracks.component';
 import { ArtistComponent } from './artist/artist.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AlbumsComponent } from './albums/albums.component';
@@ -16,7 +15,6 @@ import {routes} from './app-routing.module';
     AppComponent,
     HomeComponent,
     SearchComponent,
-    TracksComponent,
     ArtistComponent,
     AlbumsComponent,
   ],

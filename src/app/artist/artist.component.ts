@@ -28,7 +28,6 @@ export class ArtistComponent implements OnInit {
         console.log(topTracks);
         this.topTracks = topTracks;
       });
-
   }
 
   ngOnInit() {

@@ -58,9 +58,14 @@ export class SearchComponent implements OnInit {
       albumID = item.album[0].id;
     }
     //Navigate to Artist Page
-    this.router.navigate(['/album', albumID]);
+    this.router.navigate(['/albums', albumID]);
   }
-  
+
+
+
+
+
+
   ngOnInit() {
 
   }
