@@ -15,7 +15,7 @@ export class SpotifyService {
     const url = `https://api.spotify.com/v1/${query}`;
     const headers = new HttpHeaders({
       Authorization:
-        `Bearer BQB0d-3mDTXQ4U0XxdgRqWpHaYyOvxy9IQ5H08AXNOPy8Hn1DUamAVWZQG2GlJOa4txdZLUzp4Joq_wRfUE`
+        `Bearer BQBfn9ceGb7lWiILbPOovrcsoYfn89opgMtbb6x09cZNA4NpVWtpEMoA-VAmwqz6l3H_DQuDV1LdSmu898o`
       //key reset every hour --- I used postman to get it
     });
     return this.http.get(url, { headers });
@@ -41,7 +41,7 @@ export class SpotifyService {
 
   //Getting the Top Tracks by an Artist
   getArtist_Track(id: string) {
-    return this.getQuery(`artists/${id}/top-tracks`).pipe(
+    return this.getQuery(`artists/${id}/top-tracks?country=SE`).pipe(
       map(data => data["tracks"].items)
     );
   }

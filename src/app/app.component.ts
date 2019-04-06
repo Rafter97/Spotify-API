@@ -12,7 +12,7 @@ export class AppComponent {
   }
 
   navigate(){
-    this.router.navigate(['/artist/' + "45"])
+    this.router.navigate(['/artist/' + "{id}"])
   }
 }
 

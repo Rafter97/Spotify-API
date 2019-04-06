@@ -8,15 +8,16 @@
   <div class="container">
     <h4 style=" text-align: center;" id="Titles">Artists</h4>
 
+<!--When the image is clicked it will acccess the music-->
+<div *ngFor="let artistsName of artists" class="items" ng-if="isViewable">
 
-    <div *ngFor="let artistsName of artists" class="items">
+  <img src="{{artistsName.images[0].url}}" class="artist-image" width="200" height="200"
+  (click)="getTopTracks(artistsName.id)">
+  <h5 id="Name">{{ artistsName.name }}</h5>
 
-      <img src="{{artistsName.images[0].url}}" class="artist-image" width="200" height="200"
-        (click)="DisplayArtists(artistsName)">
-      <h5 id="Name">{{ artistsName.name }}</h5>
-
-    </div>
-
+</div>
+<div isViewable=true></div>
+</div>
     <p></p>
 
     <div class="container">
@@ -25,7 +26,7 @@
       <div *ngFor="let albumCover of albums" class="items">
 
         <img src="{{albumCover.images[0].url}}" class="artist-image" width="200" height="200"
-          (click)="DisplayAlbum(albumCover)">
+        (click)="getTopTracks(albumCover.id[0])">
         <h5 id="Name">{{ albumCover.name }}</h5>
 
       </div>

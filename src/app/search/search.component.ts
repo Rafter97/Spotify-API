@@ -14,6 +14,8 @@ export class SearchComponent implements OnInit {
 
   artists: any[] = [];
   albums: any[] = [];
+  topTracks: any[] = [];
+  public isViewable: boolean;
 
   constructor(private _Spotify: SpotifyService, private router: Router) { }
 
@@ -34,7 +36,7 @@ export class SearchComponent implements OnInit {
       });
   }
   
-  //Display Artist in a different Page
+/*   //Display Artist in a different Page
   DisplayArtists(item: any) {
     let artistID;
     if (item.type === 'artist') {
@@ -46,8 +48,8 @@ export class SearchComponent implements OnInit {
     //Navigate to Artist Page
     this.router.navigate(['/artist', artistID]);
   }
-
-  //Display Album in a different Page
+ */
+/*   //Display Album in a different Page
   DisplayAlbum(item: any) {
     let albumID;
     if (item.type === 'album') {
@@ -59,14 +61,22 @@ export class SearchComponent implements OnInit {
     //Navigate to Artist Page
     this.router.navigate(['/albums', albumID]);
   }
+ */
 
-
+  getTopTracks(id: string) {
+    this._Spotify.getArtist_Track(id)
+      .subscribe(topTracks => {
+        console.log(topTracks);
+        this.topTracks = topTracks;
+      });
+      this.isViewable = true
+  }
 
 
 
 
   ngOnInit() {
-
+    this.isViewable = false;
   }
 
 }
