@@ -7,8 +7,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SpotifyService {
-  //  clientId = '1a35a32a3614461eb98bcfc86e8f813c';
-  //  clientSecertId = 'c11faf191210476887ed694d9fa72182';
 
   constructor(private http: HttpClient) { }
   getQuery(query: string) {
