@@ -6,6 +6,6 @@ export const environment = {
     databaseURL: "https://sotify-api.firebaseio.com",
     projectId: "sotify-api",
     storageBucket: "sotify-api.appspot.com",
-    messagingSenderId: "314986786608"
+    messagingSenderId: "314986786608",
   }
 };
