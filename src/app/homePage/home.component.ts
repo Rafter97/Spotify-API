@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
 
   newSongs: any[] = [];
   errorMessage: string;
+  AlbumTracks: any[] = [];
   //@Input() items: any[] = [];
 
   constructor(private _spotify: SpotifyService) {
@@ -23,9 +24,17 @@ export class HomeComponent implements OnInit {
     console.log(this.newSongs);
   }
 
+  getAlbumTracks(id: string) {
+    console.log(id)
+    this._spotify.getAlbum_Track(id)
+      .subscribe((data: any) => {
+        this.AlbumTracks = data.items;
+        console.log(this.AlbumTracks)
+      });
+  }
 
   ngOnInit() {
-    
+
   }
 
 }

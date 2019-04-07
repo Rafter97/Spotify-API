@@ -2,6 +2,7 @@
   <!--Add in Titles so that it appears when you type only-->
 
   <input type="search" (keyup)="searchArtists(searchTerm.value)" #searchTerm />
+  <button  (click)="getFirebase(searchTerm.value)">Save To Database</button>
 
   <p></p>
 
@@ -9,15 +10,28 @@
     <h4 style=" text-align: center;" id="Titles">Artists</h4>
 
 <!--When the image is clicked it will acccess the music-->
-<div *ngFor="let artistsName of artists" class="items" ng-if="isViewable">
+<div *ngFor="let artistsName of artists" class="items" >
 
   <img src="{{artistsName.images[0].url}}" class="artist-image" width="200" height="200"
   (click)="getTopTracks(artistsName.id)">
   <h5 id="Name">{{ artistsName.name }}</h5>
 
+
 </div>
-<div isViewable=true></div>
 </div>
+<div class="container">
+<div *ngIf="topTracks">
+    <h4>Songs</h4>
+  <div *ngFor="let song of topTracks" class="items">
+       <img src="{{song.album.images[0].url}}"  width="300" height="300" id="songtitle" class="artist-image">
+        <p>{{ song.album.name }}</p>
+
+  </div>
+</div>
+</div>
+
+<!-- Getting the Albums -->
+<!--
     <p></p>
 
     <div class="container">
@@ -31,3 +45,4 @@
 
       </div>
     </div>
+-->

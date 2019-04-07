@@ -9,13 +9,26 @@
 </div>
 
 <p></p>
+
 <p id="Title" class="Middle">New Releases</p>
 <div class="container">
   <div *ngFor="let newSong of newSongs" class="item">
     <!--Need A NgFor to loop through the images-->
-    <img src="{{newSong.images[0].url}}" class="album-image">
+    <img src="{{newSong.images[0].url}}" class="album-image" (click)="getAlbumTracks(newSong.id)">
     <h5 id="AlbumName">{{ newSong.name }}</h5>
     <!--Album Name-->
+  </div>
+
+  <p></p>
+
+  <div  *ngIf="AlbumTracks">
+    <p class="Middle">Album Songs</p>
+    <div *ngFor="let song of AlbumTracks" class="items">
+
+        <p>{{ song.name }} by <b>{{ song.artists[0].name }}</b></p>
+
+    </div>
+
   </div>
 
 </div>
